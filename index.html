@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    overflow: hidden;
+  }
+
+  .welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    z-index: 1001;
+  }
+
+  .welcome-screen button {
+    background: #04AA6D;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+    display: none;
+  }
+
+  .welcome-screen button:hover {
+    background: #03a157;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #222, #555);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .navbar a:hover {
+    background: #04AA6D;
+    color: white;
+  }
+
+  .section {
+    height: 200vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .textbox {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    max-width: 800px;
+  }
+
+  .textbox:hover {
+    transform: scale(1.05);
+  }
+
+  #about {
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  }
+
+  #services {
+    background: linear-gradient(to bottom, #3a6186, #89253e);
+  }
+
+  #portfolio {
+    background: linear-gradient(to bottom, #11998e, #38ef7d);
+  }
+
+  #contact {
+    background: linear-gradient(to bottom, #cc2b5e, #753a88);
+  }
+
+  #cv {
+    background: linear-gradient(to bottom, #ff416c, #ff4b2b);
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p, ul {
+    font-size: 20px;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="welcome-screen" id="welcome-screen">
+  <div>
+    <p>Welcome to My Portfolio!</p>
+    <button id="proceed-button" onclick="hideWelcomeScreen()">Proceed</button>
+  </div>
+</div>
+
+<div class="navbar">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+  <a href="#cv">Download CV</a>
+</div>
+
+<div id="about" class="section">
+  <div class="textbox">
+    <h2>About Me</h2>
+    <p>I'm Pranav Singh Bhaunt, a passionate web designer and software developer with a strong foundation in front-end development and graphical design. I specialize in creating seamless digital experiences with aesthetics and functionality.</p>
+  </div>
+</div>
+
+<div id="services" class="section">
+  <div class="textbox">
+    <h2>Services</h2>
+    <ul>
+      <li>Front-End Web Development (HTML, CSS, JavaScript)</li>
+      <li>UI/UX Design & Prototyping</li>
+      <li>Software Development in Java, Python, and C#</li>
+      <li>3D Modeling & Graphic Design using SketchUp, Photoshop, and Illustrator</li>
+      <li>Game Development and Interactive Web Elements</li>
+    </ul>
+  </div>
+</div>
+
+<div id="portfolio" class="section">
+  <div class="textbox">
+    <h2>Portfolio</h2>
+    <ul>
+        <li><strong>Web Portfolio:</strong> A simple portfolio made with HTML, CSS, and JavaScript.</li>
+        <li>
+          <img src="https://github.com/PR4NVF/NuevoRep/blob/main/Screenshot%202025-01-30%20215141.png?raw=true" 
+               alt="Portfolio Screenshot" width="600" height="400" loading="lazy">
+        </li>
+  
+        <li><strong>Vehicle-Based Puzzle Game:</strong> Developed in Ruby, featuring obstacle-based navigation. Made at the Tech Trek 2024, winning 1st place at Tech Exhibit.</li>
+        <li>
+          <img src="https://github.com/PR4NVF/NuevoRep/blob/main/Screenshot%202024-11-02%20134136.png?raw=true" 
+               alt="Game Screenshot" width="600" height="400" loading="lazy">
+        </li>
+    </ul>
+  </div>
+</div>
+
+<div id="contact" class="section">
+  <div class="textbox">
+    <h2>Contact Me</h2>
+    <p>Email: pranavbhaunt@gmail.com<br>Phone: +91 8791379553</p>
+  </div>
+</div>
+
+<div id="cv" class="section">
+  <div class="textbox">
+    <h2>Download My CV</h2>
+    <p>View my detailed resume with my skills and experience.</p>
+    <a href="https://github.com/PR4NVF/NuevoRep/blob/main/CVV%20-%20PRANAV%20SINGH%20-%20INTERNSHIP.pdf" download style="background: #04AA6D; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Download CV</a>
+  </div>
+</div>
+
+<script>
+setTimeout(function() {
+  document.getElementById("proceed-button").style.display = "inline-block";
+}, 3000);
+
+function hideWelcomeScreen() {
+  document.getElementById("welcome-screen").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+</script>
+
+</body>
+</html>
